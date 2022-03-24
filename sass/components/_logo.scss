@@ -1,0 +1,19 @@
+.logo,
+.logo__part {
+  font-family: Raleway;
+  @include font(26px, 700, null, 0.03em);
+  line-height: calc(31 / 26);
+  text-decoration: none;
+}
+.logo__part {
+  color: var(--accent-color);
+}
+.logo--dark-theme {
+  color: var(--title-color);
+  margin-right: 93px;
+}
+.logo--light-theme {
+  display: block;
+  color: var(--scnd-body-text-color);
+  margin-bottom: 20px;
+}

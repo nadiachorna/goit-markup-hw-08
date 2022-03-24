@@ -1,0 +1,103 @@
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.buttons-list__item {
+  margin-right: 8px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.buttons-list__btn {
+  font-family: inherit;
+  @include font(16px, 500, null, 0.03em);
+  line-height: calc(26 / 16);
+  text-align: center;
+  padding: 6px 22px;
+
+  background-color: var(--scnd-background-color);
+  color: var(--title-color);
+  border-radius: 4px;
+
+  transition: background-color 250ms var(--transform),
+    color 250ms var(--transform), box-shadow 250ms var(--transform);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--scnd-body-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.portfolio-style {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.portfolio-list__item {
+  width: 370px;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.portfolio-list__item-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 24px;
+  @extend %align-list;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(101%);
+  transition: transform 250ms var(--transform);
+  .portfolio-list__link:hover &,
+  .portfolio-list__link:focus & {
+    transform: translateY(0);
+  }
+}
+.portfolio-overlay__text {
+  @include font(18px, null, null, 0.03em);
+  line-height: calc(28 / 18);
+  color: #ffffff;
+}
+
+.portfolio-list__link {
+  display: block;
+
+  transition: box-shadow 250ms var(--transform);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.portfolio-list__desc-container {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+.portfolio-list__title {
+  @include font(18px, 700, null, 0.06em);
+  line-height: calc(36 / 18);
+  padding-bottom: 4px;
+
+  color: var(--title-color);
+}
+.portfolio-list__desc {
+  @include font(16px, null, null, 0.03em);
+  line-height: calc(30 / 16);
+
+  color: var(--body-text-color);
+}

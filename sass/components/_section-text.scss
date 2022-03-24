@@ -1,0 +1,5 @@
+.section-text {
+  @include font(14px, null, null, 0.03em);
+  line-height: calc(24 / 14);
+  color: var(--body-text-color);
+}

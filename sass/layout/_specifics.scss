@@ -1,0 +1,28 @@
+.specifics {
+  padding-bottom: 0;
+}
+
+.specifics__list {
+  display: flex;
+}
+
+.specifics__item {
+  margin-right: 30px;
+  min-width: 270px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.specifics__container {
+  height: 120px;
+  background-color: var(--scnd-background-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  @extend %align-list;
+  justify-content: center;
+}
+.specifics__icon {
+  width: 70px;
+  height: 70px;
+}
