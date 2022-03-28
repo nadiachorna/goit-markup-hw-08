@@ -1,5 +1,11 @@
 .specifics {
-  padding-bottom: 0;
+  padding-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
+  }
 }
 
 .specifics__list {
@@ -21,9 +27,12 @@
     width: 354px;
     margin-top: 30px;
     margin-left: 30px;
+    margin-bottom: 0;
   }
   @media screen and (min-width: 1200px) {
-    margin-right: 0 30px 0 0;
+    margin-right: 30px;
+    margin-left: 0;
+    margin-bottom: 0;
     width: 270px;
     &:last-child {
       margin-right: 0;
