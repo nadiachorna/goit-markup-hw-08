@@ -727,13 +727,7 @@ body {
 }
 
 .specifics {
-  padding-bottom: 30px;
-}
-
-@media screen and (min-width: 768px) {
-  .specifics {
-    padding-bottom: 60px;
-  }
+  padding-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -762,6 +756,10 @@ body {
 .specifics__item {
   width: 450px;
   margin-bottom: 30px;
+}
+
+.specifics__item:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
